@@ -76,11 +76,14 @@ header nav ul li{
     font-family: var(--main-text);
     letter-spacing: 3px;
     cursor: pointer;
+    height: 100px;
 }
 
 header nav ul li a{
     text-decoration: none;
     color: white;
+    padding: 40px 0;
+   
 }
 
 header nav ul li:hover{
@@ -237,14 +240,13 @@ main{
 }
 
 @keyframes appearRight {
-    from{
-        transform: translateY(100%);
+    from{ 
+        transform: scale(.1);
         opacity: 0;
     }
 
     to{
-        transform: translateX(0);
-        
+        transform: scale(1);
     }
 }
 
@@ -268,6 +270,7 @@ main{
     font-family: var(--main-text);
     margin-right: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 .planet-info-wrap ul li:hover{
@@ -286,7 +289,7 @@ main{
     font-family: var(--sub-text);
     font-weight: 400;
     margin-bottom: 20px;
-    animation: appearRight ease-in .6s;
+    animation: appearRight ease-in .4s;
 }
 
 .planet-info-wrap p{
