@@ -8,6 +8,7 @@ const planetTitle = document.querySelector(".planet-name");
 const planetDescrip = document.querySelector(".description");
 const distance = document.querySelector(".distance");
 const timeDistance = document.querySelector(".time");
+const planetBtnList = document.querySelectorAll(".planet-info-cont ul li");
 const url = "/space-tourism-website-main/starter-code/data.json";
 
 //Event Listeners
@@ -38,15 +39,8 @@ titanBtn.addEventListener("click", ()=>{
         createHtml(3);
 })
 
-// moonBtn.addEventListener("click", ()=>{
-//         createHtml(0);
-// })
 
-// moonBtn.addEventListener("click", ()=>{
-//         createHtml(0);
-// })
-
-
+//Funtions
 
  async function staticInfo(){
         const dataFetch = await fetch(url);
@@ -55,7 +49,6 @@ titanBtn.addEventListener("click", ()=>{
         planetImg.classList.add("planet-img");
         planetImg.src = data.destinations[0].images.png
         planetCont.appendChild(planetImg)
-        console.log(data)
         //creating planet name element
         const planetName = document.createElement("h1")
         planetName.innerHTML = data.destinations[0].name.toUpperCase();
@@ -63,8 +56,6 @@ titanBtn.addEventListener("click", ()=>{
         planetDescrip.innerHTML = data.destinations[0].description;
         distance.innerHTML = data.destinations[0].distance;
         timeDistance.innerHTML = data.destinations[0].travel;
-  
-        
 }
 
 staticInfo()
@@ -87,14 +78,18 @@ staticInfo()
         
 }
 
+//putting the border on the planets list 
 
-
-
-// async function getData(){
-//         const dataFetch = await fetch(url);
-//         const data = await dataFetch.json();
-        
-// }
+planetBtnList.forEach(planetBtn=>{
+        planetBtn.addEventListener("click",()=>{
+                if(planetBtn.classList.contains("active")){
+                       planetBtn.classList.add("active")
+                }else{
+                        planetBtnList.forEach(planetBtn => planetBtn.classList.remove("active"))
+                        planetBtn.classList.add("active")
+                }
+        })
+})
 
 
 

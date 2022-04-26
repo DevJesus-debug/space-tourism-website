@@ -66,6 +66,7 @@ header nav ul{
 
 header nav ul .number{
     margin-right: 8px;
+    
 }
 
 header nav ul li{
@@ -76,18 +77,27 @@ header nav ul li{
     font-family: var(--main-text);
     letter-spacing: 3px;
     cursor: pointer;
-    height: 100px;
 }
 
 header nav ul li a{
     text-decoration: none;
     color: white;
-    padding: 40px 0;
-   
+    padding: 38px 0;
+    height: 100px;
+    display: flex;
 }
 
-header nav ul li:hover{
-    border-bottom: solid 1px white;
+header nav ul .home-link{
+    border-bottom: solid 2px white;
+}
+
+header nav ul li .home-link:hover{
+    border-bottom: solid 2px white;
+    cursor:default;
+}
+
+header nav ul li a:hover{
+    border-bottom: solid 2px rgba(210, 210, 210, 0.411);
 }
 
 
@@ -187,6 +197,14 @@ main{
 
 /*Destination Page styling*/
 
+header nav ul .destination-link-dest-page{
+    border-bottom: solid 2px white;
+}
+
+header nav ul li .destination-link-dest-page:hover{
+    border-bottom: solid 2px white;
+    cursor:default;
+}
 
 .destination{
     background-image: url("/space-tourism-website-main/starter-code/assets/destination/background-destination-desktop.jpg");
@@ -273,11 +291,13 @@ main{
     cursor: pointer;
 }
 
-.planet-info-wrap ul li:hover{
+.planet-info-wrap ul li.active{
     border-bottom: solid 2px white;
-    
 }
 
+.planet-info-wrap ul li:hover{
+    border-bottom: solid 2px rgba(255, 255, 255, 0.41);
+}
 
 .planet-info-wrap .planet-name{
     overflow-y: hidden;
@@ -338,6 +358,129 @@ main{
 
 
 
+/*CREW STYLING****************************************/
+
+header nav ul .crew-link-crew-page{
+    border-bottom: solid 2px white;
+}
+
+header nav ul li .crew-link-crew-page:hover{
+    border-bottom: solid 2px white;
+    cursor:default;
+}
+
+ .crew{
+    background-image:url(/space-tourism-website-main/starter-code/assets/crew/background-crew-desktop.jpg);
+}
+
+.crew-info-cont .title-cont{
+    display: flex;
+    font-size: 2rem;
+    font-family: var(--main-text);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 140px;
+    margin-top: 70px;
+}
+
+.crew-info-cont .title-cont .number{
+    margin-right: 23px;
+    opacity: .25;
+    font-weight: 900;
+}
+
+.crew-info-cont{
+        width: 55%;
+        display: flex;
+        justify-content: flex-end;
+        animation: decend .5s ease-in;
+}
+
+.crew-info-cont .crew-info{
+    width: 77%;
+}
+
+
+.crew-img-cont{
+    width: 45%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.crew-img-cont img{
+    animation: rise .7s ease-in;
+}
 
 
 
+.crew-title-cont h3{
+    font-size:2.3rem;
+    font-family: var(--sub-text);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.668);
+}
+
+.crew-name-cont h2{
+    font-size: 3.4rem;
+    font-family: var(--sub-text);
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+
+.crew-bio-cont{
+    max-width: 500px;
+    width: 455px;
+}
+.crew-bio-cont p{
+    font-family: var(--main-text);
+    letter-spacing: 1.3px;
+    line-height: 30px;
+    font-size: 19px;
+    height: 155px;
+    margin-bottom: 80px;
+}
+
+.circle-menu{
+    list-style: none;
+    display: flex;
+
+}
+
+.circle-menu li{
+    background-color: rgba(237, 237, 237, 0.608);
+    margin-right: 30px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.circle-menu li:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes rise {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes decend {
+    from{
+        transform: translateX(-100%);
+       
+    }
+
+    to{
+        transform: translateX(0);
+        
+    }
+}
