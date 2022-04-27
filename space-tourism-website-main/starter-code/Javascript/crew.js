@@ -3,40 +3,32 @@ const crewNameCont = document.querySelector(".crew-info-cont .crew-name-cont");
 const crewImgCont = document.querySelector(".crew-img");
 const crewBioCont = document.querySelector(".crew-bio-cont");
 const menuBtns = document.querySelectorAll(".circle-menu li");
+const number = document.querySelectorAll(".number");
 const url = "/space-tourism-website-main/starter-code/data.json";
 
 
+//EVENTLISTENERS
+menuBtns.forEach(btn=>{
+    btn.addEventListener("click",(e)=>{
+        if(!btn.classList.contains("active")){
+            menuBtns.forEach(btn=>{ btn.classList.remove("active-circle")})
+            btn.classList.add("active-circle")
+        }
+    })
+})
 
+//FUNCTIONS
 function infoButtons(){
     for(let i = 0; i < menuBtns.length ;i++){
        menuBtns[i].addEventListener("click",(e)=>{
-            if(e.target === menuBtns[0]){
-                crewImgCont.innerHTML = " "
-                crewBioCont.innerHTML = " "
-                crewNameCont.innerHTML = " "
-                crewTitleCont.innerHTML = " "
-                createHtml(0)
-            }
-            if(e.target === menuBtns[1]){
-                crewImgCont.innerHTML = "";
-                crewBioCont.innerHTML = " "
-                crewNameCont.innerHTML = " "
-                crewTitleCont.innerHTML = " "
-                createHtml(1)
-            }
-            if(e.target === menuBtns[2]){
-                crewImgCont.innerHTML = "";
-                crewBioCont.innerHTML = " "
-                crewNameCont.innerHTML = " "
-                crewTitleCont.innerHTML = " "
-                createHtml(2)
-            }
-            if(e.target === menuBtns[3]){
-                crewImgCont.innerHTML = "";
-                crewBioCont.innerHTML = " "
-                crewNameCont.innerHTML = " "
-                crewTitleCont.innerHTML = " "
-                createHtml(3)
+           let number = menuBtns[i].value 
+           console.log(number)
+           if(e.target){
+            crewImgCont.innerHTML = " ";
+            crewBioCont.innerHTML = " ";
+            crewNameCont.innerHTML = " ";
+            crewTitleCont.innerHTML = " ";
+            createHtml(number)
             }
         })
     }
@@ -61,7 +53,6 @@ async function createHtml(number){
     crewBio.innerHTML = data.crew[number].bio;
     crewBioCont.appendChild(crewBio);
 }
-
 
 
  async function staticInfo(){

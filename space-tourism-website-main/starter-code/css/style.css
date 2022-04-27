@@ -314,7 +314,7 @@ header nav ul li .destination-link-dest-page:hover{
 
 .planet-info-wrap p{
    font-family: var(--main-text);
-   line-height: 36px;
+   line-height: 30px;
    font-size: 19px;
    letter-spacing: 1.5px;
 }
@@ -393,7 +393,7 @@ header nav ul li .crew-link-crew-page:hover{
         width: 55%;
         display: flex;
         justify-content: flex-end;
-        animation: decend .5s ease-in;
+        animation: decend 1s ease-in;
 }
 
 .crew-info-cont .crew-info{
@@ -449,13 +449,20 @@ header nav ul li .crew-link-crew-page:hover{
 }
 
 .circle-menu li{
-    background-color: rgba(237, 237, 237, 0.608);
+    background-color: rgba(237, 237, 237, 0.333);
     margin-right: 30px;
     border-radius: 50%;
     width: 15px;
     height: 15px;
     cursor: pointer;
 }
+
+
+
+.circle-menu li.active-circle{
+    background-color: rgb(255, 255, 255);
+}
+
 
 .circle-menu li:hover{
     background-color: rgb(255, 255, 255);
@@ -483,4 +490,122 @@ header nav ul li .crew-link-crew-page:hover{
         transform: translateX(0);
         
     }
+}
+
+/*TECHNOLOGY STYLING*/
+
+header nav ul .technology-link-technology-page{
+    border-bottom: solid 2px white;
+}
+
+header nav ul li .technology-link-technology-page:hover{
+    border-bottom: solid 2px white;
+    cursor:default;
+}
+
+.technology{
+    background-image: url(/space-tourism-website-main/starter-code/assets/technology/background-technology-desktop.jpg);
+}
+
+.technology-info-cont .title-cont{
+    display: flex;
+    font-size: 1.7rem;
+    font-family: var(--main-text);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 140px;
+    margin-top: 70px;
+}
+
+.technology-info-wrap{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.technology-info-cont{
+    width: 79%;
+}
+
+.technology-info-cont .number{
+    margin-right: 23px;
+    opacity: .25;
+    font-weight: 900;
+}
+
+
+.technology-text-cont {
+    display: flex;
+}
+
+
+.technology-text-cont .number-btns li{  
+    height: 75px;
+    width: 75px;
+    border: solid 1px rgba(255, 255, 255, 0.28);
+    border-radius: 50%;
+    margin-bottom: 30px;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.technology-text-cont .number-btns li.active-numb{  
+   background-color: white;
+   color: black;
+}
+
+.technology-text-cont .number-btns li:hover{  
+    border: solid 1.2px white;
+ }
+
+.technology-text-cont  h3{
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: var(--main-text);
+}
+
+.technology-text-cont  h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: var(--sub-text);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.technology-text-cont  h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: var(--sub-text);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-text-cont{
+    font-size: 17px;
+    letter-spacing: 1.3px;
+    line-height: 30px;
+    font-family: var(--main-text);
+}
+
+.technology-info{
+    margin-left: 80px;
+    
+}
+
+.technology-img-wrap{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
 }

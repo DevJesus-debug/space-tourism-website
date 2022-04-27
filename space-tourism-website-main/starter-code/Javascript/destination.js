@@ -1,8 +1,3 @@
-const planetImg = document.querySelector(".planet-cont img");
-const moonBtn = document.querySelector(".moon");
-const marsBtn = document.querySelector(".mars");
-const europaBtn = document.querySelector(".europa");
-const titanBtn = document.querySelector(".titan");
 const planetCont = document.querySelector(".planet-img-cont");
 const planetTitle = document.querySelector(".planet-name");
 const planetDescrip = document.querySelector(".description");
@@ -11,36 +6,23 @@ const timeDistance = document.querySelector(".time");
 const planetBtnList = document.querySelectorAll(".planet-info-cont ul li");
 const url = "/space-tourism-website-main/starter-code/data.json";
 
-//Event Listeners
-
-moonBtn.addEventListener("click", ()=>{
-        planetCont.innerHTML = " "
-        planetTitle.innerHTML = " "
-        createHtml(0);
-})
-
-marsBtn.addEventListener("click", ()=>{
-        planetCont.innerHTML = " "
-        planetTitle.innerHTML = " "
-        createHtml(1);
-
-})
-
-europaBtn.addEventListener("click", ()=>{
-        planetCont.innerHTML = " "
-        planetTitle.innerHTML = " "
-        createHtml(2);
-
-})
-
-titanBtn.addEventListener("click", ()=>{
-        planetCont.innerHTML = " ";
-        planetTitle.innerHTML = " "
-        createHtml(3);
-})
-
 
 //Funtions
+
+function planeOptions(){
+    for(let i = 0; i< planetBtnList.length ;i++){
+        let index = planetBtnList[i].value
+        planetBtnList[i].addEventListener("click",(e)=>{
+            if(e.target && !planetBtnList[i].classList.contains("active")){
+                planetCont.innerHTML = " "
+                planetTitle.innerHTML = " "
+                createHtml(index)
+                planetBtnList.forEach(btn => btn.classList.remove("active"))
+                planetBtnList[i].classList.add("active")
+            }
+        })
+    }
+}
 
  async function staticInfo(){
         const dataFetch = await fetch(url);
@@ -57,8 +39,6 @@ titanBtn.addEventListener("click", ()=>{
         distance.innerHTML = data.destinations[0].distance;
         timeDistance.innerHTML = data.destinations[0].travel;
 }
-
-staticInfo()
 
 
  async function createHtml(number){
@@ -78,19 +58,5 @@ staticInfo()
         
 }
 
-//putting the border on the planets list 
-
-planetBtnList.forEach(planetBtn=>{
-        planetBtn.addEventListener("click",()=>{
-                if(planetBtn.classList.contains("active")){
-                       planetBtn.classList.add("active")
-                }else{
-                        planetBtnList.forEach(planetBtn => planetBtn.classList.remove("active"))
-                        planetBtn.classList.add("active")
-                }
-        })
-})
-
-
-
-
+staticInfo();
+planeOptions();
