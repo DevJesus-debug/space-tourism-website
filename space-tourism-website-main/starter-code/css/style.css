@@ -122,6 +122,7 @@ main{
     flex-direction: column;
     justify-content: center;
     margin-top: 100px;
+    animation:  techtext .6s ease-in;
 }
 
 .text h3{
@@ -184,7 +185,13 @@ main{
     justify-content: center;
     margin-top: 220px;
     margin-left: 100px;
-    transition: all ease-in-out .5s;
+    transition: all ease-out .5s;
+    animation: scalein 1s ease-in;
+}
+
+.circle a{
+    text-decoration: none;
+    color: black;
 }
 
  .circle-layer:hover{
@@ -195,6 +202,26 @@ main{
     transition: all ease-in-out .5s;
 }
 
+
+/*Animations*/
+
+@keyframes scalein {
+   0%{
+       transform: scale(.3);
+       opacity: 0;
+   }
+
+   50%{
+       transform: scale(1.2);
+       opacity: .2;
+   }
+
+   100%{
+       transform: scale(1);
+       opacity: 1;
+   }
+    
+}
 /*Destination Page styling*/
 
 header nav ul .destination-link-dest-page{
@@ -214,17 +241,17 @@ header nav ul li .destination-link-dest-page:hover{
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.planet-cont .title-cont{
+ .title-cont{
     display: flex;
     font-size: 2rem;
     font-family: var(--main-text);
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 80px;
+    margin-top: 70px;
     margin-right: 133px;
 }
 
@@ -369,19 +396,10 @@ header nav ul li .crew-link-crew-page:hover{
     cursor:default;
 }
 
- .crew{
+.crew{
     background-image:url(/space-tourism-website-main/starter-code/assets/crew/background-crew-desktop.jpg);
 }
 
-.crew-info-cont .title-cont{
-    display: flex;
-    font-size: 2rem;
-    font-family: var(--main-text);
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 140px;
-    margin-top: 70px;
-}
 
 .crew-info-cont .title-cont .number{
     margin-right: 23px;
@@ -393,7 +411,6 @@ header nav ul li .crew-link-crew-page:hover{
         width: 55%;
         display: flex;
         justify-content: flex-end;
-        animation: decend 1s ease-in;
 }
 
 .crew-info-cont .crew-info{
@@ -409,7 +426,7 @@ header nav ul li .crew-link-crew-page:hover{
 }
 
 .crew-img-cont img{
-    animation: rise .7s ease-in;
+    animation: rise .6s ease-in;
 }
 
 
@@ -429,10 +446,15 @@ header nav ul li .crew-link-crew-page:hover{
     font-weight: 400;
 }
 
+.crew-text-wraper{
+    animation: decend .9s ease-in;
+}
+
 .crew-bio-cont{
     max-width: 500px;
     width: 455px;
 }
+
 .crew-bio-cont p{
     font-family: var(--main-text);
     letter-spacing: 1.3px;
@@ -456,8 +478,6 @@ header nav ul li .crew-link-crew-page:hover{
     height: 15px;
     cursor: pointer;
 }
-
-
 
 .circle-menu li.active-circle{
     background-color: rgb(255, 255, 255);
@@ -508,11 +528,6 @@ header nav ul li .technology-link-technology-page:hover{
 }
 
 .technology-info-cont .title-cont{
-    display: flex;
-    font-size: 1.7rem;
-    font-family: var(--main-text);
-    text-transform: uppercase;
-    letter-spacing: 4px;
     margin-bottom: 140px;
     margin-top: 70px;
 }
@@ -537,6 +552,8 @@ header nav ul li .technology-link-technology-page:hover{
 
 .technology-text-cont {
     display: flex;
+    animation: techtext .7s ease-in;
+    overflow: hidden;
 }
 
 
@@ -578,6 +595,7 @@ header nav ul li .technology-link-technology-page:hover{
     font-family: var(--sub-text);
     margin-top: 10px;
     margin-bottom: 20px;
+    animation: techheader .5s ease-in-out;
 }
 
 .technology-text-cont  h2{
@@ -608,4 +626,43 @@ header nav ul li .technology-link-technology-page:hover{
     align-items: center;
     justify-content: flex-end;
     overflow: hidden;
+}
+
+.tech-img-cont img{
+    animation: techimg .7s ease-in;
+}
+
+/*ANIMATIONS*/
+
+@keyframes techtext {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes techimg {
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes techheader {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+    }
 }

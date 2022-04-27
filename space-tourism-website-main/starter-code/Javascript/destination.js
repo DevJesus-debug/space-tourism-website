@@ -9,7 +9,7 @@ const url = "/space-tourism-website-main/starter-code/data.json";
 
 //Funtions
 
-function planeOptions(){
+function planetOptions(){
     for(let i = 0; i< planetBtnList.length ;i++){
         let index = planetBtnList[i].value
         planetBtnList[i].addEventListener("click",(e)=>{
@@ -59,4 +59,4 @@ function planeOptions(){
 }
 
 staticInfo();
-planeOptions();
+planetOptions();
