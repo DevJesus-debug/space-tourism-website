@@ -24,22 +24,6 @@ function planetOptions(){
     }
 }
 
- async function staticInfo(){
-        const dataFetch = await fetch(url);
-        const data = await dataFetch.json();
-        const planetImg = document.createElement("img");
-        planetImg.classList.add("planet-img");
-        planetImg.src = data.destinations[0].images.png
-        planetCont.appendChild(planetImg)
-        //creating planet name element
-        const planetName = document.createElement("h1")
-        planetName.innerHTML = data.destinations[0].name.toUpperCase();
-        planetTitle.appendChild(planetName)
-        planetDescrip.innerHTML = data.destinations[0].description;
-        distance.innerHTML = data.destinations[0].distance;
-        timeDistance.innerHTML = data.destinations[0].travel;
-}
-
 
  async function createHtml(number){
         const dataFetch = await fetch(url);
@@ -58,5 +42,6 @@ function planetOptions(){
         
 }
 
-staticInfo();
+
+createHtml(0)
 planetOptions();

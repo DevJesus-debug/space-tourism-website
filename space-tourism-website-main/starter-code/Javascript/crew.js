@@ -22,7 +22,6 @@ function infoButtons(){
     for(let i = 0; i < menuBtns.length ;i++){
        menuBtns[i].addEventListener("click",(e)=>{
            let number = menuBtns[i].value 
-           console.log(number)
            if(e.target){
             crewImgCont.innerHTML = " ";
             crewBioCont.innerHTML = " ";
@@ -55,25 +54,5 @@ async function createHtml(number){
 }
 
 
- async function staticInfo(){
-    const dataFetch = await fetch(url);
-    const data = await dataFetch.json();
-    const crewImg = document.createElement("img");
-    crewImg.classList.add("crew-img");
-    crewImg.src = data.crew[0].images.png
-    crewImgCont.appendChild(crewImg);
-    //creating and retreiving role and name information
-    const crewTitle = document.createElement("h3")
-    const crewName = document.createElement("h2")
-    crewTitle.innerHTML = data.crew[0].role.toUpperCase();
-    crewName.innerHTML = data.crew[0].name.toUpperCase();
-    crewTitleCont.appendChild(crewTitle)
-    crewNameCont.appendChild(crewName)
-    //Creating and retreving Bio information
-     const crewBio = document.createElement("p");
-     crewBio.innerHTML = data.crew[0].bio;
-     crewBioCont.appendChild(crewBio);
-}
-
+createHtml(0)
 infoButtons()
-staticInfo()

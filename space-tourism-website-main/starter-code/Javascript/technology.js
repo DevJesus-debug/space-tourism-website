@@ -25,16 +25,22 @@ for(let i = 0; i < buttons.length ;i++){
 async function createHtml(number){
         const dataFetch = await fetch(url);
         const data = await dataFetch.json();
+        console.log(data)
         //Creating and appending info
         const techName = document.createElement("h2");
         techName.innerHTML = data.technology[number].name.toUpperCase();
         techNameCont.appendChild(techName);
         techTextCont.innerHTML = data.technology[number].description;
-        const techImg = document.createElement("img");
-        techImg.src = data.technology[number].images.portrait;
-        techImgCont.appendChild(techImg);
+        //Creating desktop Image
+        const techImgDesktop = document.createElement("img");
+        techImgDesktop.classList.add("desktop-img");
+        techImgDesktop.src = data.technology[number].images.portrait;
+        techImgCont.appendChild(techImgDesktop);
+        //Creating mobile Image
+        const techImgMobile = document.createElement("img");
+        techImgMobile.classList.add("mobile-img");
+        techImgMobile.src = data.technology[number].images.landscape;
+        techImgCont.appendChild(techImgMobile);
 }
 
 createHtml(0)
-
-startingInfo();

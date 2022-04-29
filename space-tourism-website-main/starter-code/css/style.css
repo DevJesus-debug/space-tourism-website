@@ -648,6 +648,10 @@ header nav ul li .technology-link-technology-page:hover{
     animation: techimg .7s ease-in;
 }
 
+.tech-img-cont .mobile-img{
+    display: none;
+}
+
 /*ANIMATIONS*/
 
 @keyframes techtext {
@@ -992,5 +996,13 @@ for better responsive experience
     .mobile-wrap{
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    .tech-img-cont .desktop-img{
+        display: none;
+    }
+    
+    .tech-img-cont .mobile-img{
+        display: block;
     }
 }
