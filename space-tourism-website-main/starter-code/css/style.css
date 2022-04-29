@@ -255,7 +255,7 @@ header nav ul li .destination-link-dest-page:hover{
     margin-right: 133px;
 }
 
-.planet-cont .title-cont .number{
+ .title-cont .number{
     margin-right: 23px;
     opacity: .25;
     font-weight: 900;
@@ -523,6 +523,22 @@ header nav ul li .technology-link-technology-page:hover{
     cursor:default;
 }
 
+.technology-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.technology-page .title-cont{
+    width: 50%;
+    margin-left: 168px;
+    margin-bottom: 30px;
+}
+
+.mobile-wrap{
+    display: flex;
+    align-items: center;
+}
+
 .technology{
     background-image: url(/space-tourism-website-main/starter-code/assets/technology/background-technology-desktop.jpg);
 }
@@ -668,9 +684,12 @@ header nav ul li .technology-link-technology-page:hover{
 }
 
 
-/*Tablet viewport */
+/*Tablet viewport for width 768px but start from 1000px
+for better responsive experience
+*/
 
 @media  screen and (max-width:1000px) {
+    
     .header-container{
         height: 10vh;
         display: flex;
@@ -681,9 +700,23 @@ header nav ul li .technology-link-technology-page:hover{
         justify-content: space-between;
     }
 
+    header nav{
+       width: 58%;
+    }
+
     header nav ul .number{
         display: none;
         
+    }
+
+    header nav ul{
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+
+    header nav ul li{
+        margin-right: 0px;
+        font-size: 14px;
     }
 
     header .mid-line{
@@ -700,14 +733,14 @@ header nav ul li .technology-link-technology-page:hover{
     .wraper{
         background-image: url(/space-tourism-website-main/starter-code/assets/home/background-home-tablet.jpg);
         height: auto;
-        background-position: center;
+        background-position:center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     main{
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         flex-direction: column;
     }
 
@@ -732,13 +765,18 @@ header nav ul li .technology-link-technology-page:hover{
     }
 
     .text h3{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
+    .text h1{
+        font-size: 9rem;
+        margin-top: 15px;
+    }
     
     .text p{
         font-size: 16px;
         width: 70%;
+        margin-top: 10px;
     }
 
     .explore-cont{
@@ -757,10 +795,202 @@ header nav ul li .technology-link-technology-page:hover{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 170px;
+        margin-top: 120px;
         margin-left: 0;
         transition: all ease-out .5s;
         animation: scalein 1s ease-in;
         margin-bottom: 130px;
+    }
+
+    .circle{
+        height: 220px;
+        width: 220px;
+        letter-spacing: 2px;
+    }
+
+    /*DESTINATION MOBILE STYLE**********************/
+
+    .destination{
+        background-image: url(/space-tourism-website-main/starter-code/assets/destination/background-destination-tablet.jpg);
+    }
+    
+    .planet-cont{
+        width: 100%;
+        height: 47%;
+        display: block;
+    }
+
+    .title-cont{
+        display: flex;
+        font-size: 1.2rem;
+        justify-content: flex-start;
+        font-family: var(--main-text);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 40px;
+        margin-top: 45px;
+        margin-left: 50px;
+        margin-right: 0;
+    }
+
+    .planet-img-cont{
+        margin: 0;
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .planet-img-cont img{
+        width: 300px;
+    }
+
+    .planet-info-wrap{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .planet-info-wrap ul{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        width: 280px;
+    }
+
+    .planet-info-wrap ul li{
+        margin: 0;
+        letter-spacing: 2px;
+    }
+
+    .planet-info-wrap  h1{
+        font-size: 5.3rem;
+    }
+
+    .planet-info-cont{
+        width: 80%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .distance-cont{
+        width: 100%;
+    }
+
+    .total-dist-cont{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .total-dist-number{
+        margin-right: 0;
+    }
+
+    /*CREW INFO STYLING*******************/
+
+    
+    .crew{
+        background-image:url(/space-tourism-website-main/starter-code/assets/crew/background-crew-tablet.jpg);
+    }
+
+    .crew-info-cont{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .crew-info-cont .crew-info{
+        width: 100%;
+    }
+
+
+    .crew-title-cont h3{
+        font-size:1.5rem;
+        font-family: var(--sub-text);
+        font-weight: 400;
+        margin-bottom: 8px;
+        color: rgba(255, 255, 255, 0.668);
+    }
+
+    .crew-name-cont h2{
+        font-size: 2.5rem;
+        font-family: var(--sub-text);
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+
+    .crew-bio-cont{
+        max-width: 100%;
+        width: 91%;
+        text-align: center;
+        height: 150px;
+    }
+
+    .crew-bio-cont p{
+        font-size: 16px;
+        height: 100px;
+        margin-bottom: 40px;
+        padding: 0 60px;
+    }
+
+    .crew-text-wraper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .crew-img-cont{
+        width: 100%;
+        height: 65%;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .crew-img-cont img{
+        width: 440px;
+        height: 510px;
+    }
+    
+    .circle-menu li{
+        background-color: rgba(237, 237, 237, 0.333);
+        margin-right: 20px;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+    }
+    
+    /* TECHNOLOGY**************************/
+
+    .technology-info-wrap{
+        width: 100%;
+    }
+
+    .technology-info-cont{
+        width: 79%;
+    }
+    
+
+    .technology-text-cont {
+        display: flex;
+        flex-direction: column;
+        animation: techtext .7s ease-in;
+        overflow: hidden;
+    }
+
+    .technology-text-cont .number-btns {  
+      display: flex;
+    }
+
+    .mobile-wrap{
+        display: flex;
+        flex-direction: column-reverse;
     }
 }

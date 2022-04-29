@@ -22,19 +22,6 @@ for(let i = 0; i < buttons.length ;i++){
         })
 }
 
-async function startingInfo(){
-        const dataFetch = await fetch(url);
-        const data = await dataFetch.json();
-        //Creating and appending info
-        const techName = document.createElement("h2");
-        techName.innerHTML = data.technology[0].name.toUpperCase();
-        techNameCont.appendChild(techName);
-        techTextCont.innerHTML = data.technology[0].description;
-        const techImg = document.createElement("img");
-        techImg.src = data.technology[0].images.portrait;
-        techImgCont.appendChild(techImg);
-}
-
 async function createHtml(number){
         const dataFetch = await fetch(url);
         const data = await dataFetch.json();
@@ -47,5 +34,7 @@ async function createHtml(number){
         techImg.src = data.technology[number].images.portrait;
         techImgCont.appendChild(techImg);
 }
+
+createHtml(0)
 
 startingInfo();
