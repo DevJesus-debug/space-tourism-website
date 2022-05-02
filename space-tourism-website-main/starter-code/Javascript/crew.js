@@ -37,7 +37,7 @@ async function createHtml(number){
     const dataFetch = await fetch(url);
     const data = await dataFetch.json();
     const crewImg = document.createElement("img");
-    crewImg.classList.add("crew-img");
+    crewImg.classList.add("crew-image");
     crewImg.src = data.crew[number].images.png
     crewImgCont.appendChild(crewImg);
     //creating planet name element
