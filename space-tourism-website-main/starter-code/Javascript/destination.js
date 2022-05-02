@@ -4,22 +4,8 @@ const planetDescrip = document.querySelector(".description");
 const distance = document.querySelector(".distance");
 const timeDistance = document.querySelector(".time");
 const planetBtnList = document.querySelectorAll(".planet-info-cont ul li");
-const hamburgerMenu = document.querySelector(".hamburger");
-const nav = document.querySelector("nav");
-const menuLines = document.querySelectorAll(".hamburger .line");
-
 
 const url = "/space-tourism-website-main/starter-code/data.json";
-
-//EVENTLISTENERS
-hamburgerMenu.addEventListener("click",()=>{
-    nav.classList.toggle("active-menu");
-    menuLines.forEach(menu=>{
-        menu.classList.toggle("active-close");
-      })
-})
-
-
 
 //Funtions
 

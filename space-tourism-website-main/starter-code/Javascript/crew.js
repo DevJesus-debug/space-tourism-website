@@ -4,20 +4,10 @@ const crewImgCont = document.querySelector(".crew-img");
 const crewBioCont = document.querySelector(".crew-bio-cont");
 const menuBtns = document.querySelectorAll(".circle-menu li");
 const number = document.querySelectorAll(".number");
-const hamburgerMenu = document.querySelector(".hamburger");
-const nav = document.querySelector("nav");
-const menuLines = document.querySelectorAll(".hamburger .line");
 
 const url = "/space-tourism-website-main/starter-code/data.json";
 
-
 //EVENTLISTENERS
-hamburgerMenu.addEventListener("click",()=>{
-    nav.classList.toggle("active-menu");
-    menuLines.forEach(menu=>{
-        menu.classList.toggle("active-close")
-      })
-})
 
 
 menuBtns.forEach(btn=>{

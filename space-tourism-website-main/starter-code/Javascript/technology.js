@@ -2,20 +2,9 @@ const techNameCont = document.querySelector(".technology-text-cont .tech-name-co
 const techTextCont = document.querySelector(".technology-text-cont .tech-text-cont");
 const techImgCont = document.querySelector(".technology-img-wrap .tech-img-cont");
 const buttons = document.querySelectorAll(".number-btns li");
-const hamburgerMenu = document.querySelector(".hamburger");
-const nav = document.querySelector("nav");
-const menuLines = document.querySelectorAll(".hamburger .line");
-
 
 const url = "/space-tourism-website-main/starter-code/data.json";
 
-//EVENTLISTENERS
-hamburgerMenu.addEventListener("click",()=>{
-        nav.classList.toggle("active-menu");
-        menuLines.forEach(menu=>{
-                menu.classList.toggle("active-close")
-              })
-    })
 
 //FUNCTIONS
 for(let i = 0; i < buttons.length ;i++){
