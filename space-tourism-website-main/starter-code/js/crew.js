@@ -5,7 +5,7 @@ const crewBioCont = document.querySelector(".crew-bio-cont");
 const menuBtns = document.querySelectorAll(".circle-menu li");
 const number = document.querySelectorAll(".number");
 
-const url = "/space-tourism-website-main/starter-code/data.json";
+const url = "./data.json";
 
 //EVENTLISTENERS
 

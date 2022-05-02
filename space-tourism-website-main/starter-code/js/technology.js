@@ -3,7 +3,7 @@ const techTextCont = document.querySelector(".technology-text-cont .tech-text-co
 const techImgCont = document.querySelector(".technology-img-wrap .tech-img-cont");
 const buttons = document.querySelectorAll(".number-btns li");
 
-const url = "/space-tourism-website-main/starter-code/data.json";
+const url = "./data.json";
 
 
 //FUNCTIONS

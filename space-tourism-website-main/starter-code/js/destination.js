@@ -5,7 +5,7 @@ const distance = document.querySelector(".distance");
 const timeDistance = document.querySelector(".time");
 const planetBtnList = document.querySelectorAll(".planet-info-cont ul li");
 
-const url = "/space-tourism-website-main/starter-code/data.json";
+const url = "./data.json";
 
 //Funtions
 
