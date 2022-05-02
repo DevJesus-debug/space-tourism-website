@@ -94,13 +94,6 @@ header nav ul .number{
     display: none;
 }
 
-.hamburger .line{
-    width: 30px;
-    margin-bottom: 7px;
-    list-style: none;
-    background-color: white;
-    height: 3px;
-}
 
 header nav ul li{
     display: flex;
@@ -134,9 +127,6 @@ header nav ul li a:hover{
 
 
 /*Main container styling*/
-
-
-
 
 .home-grid{
     max-width: 1440px;
@@ -279,6 +269,17 @@ header nav ul li .destination-link-dest-page:hover{
     background-image: url("/space-tourism-website-main/starter-code/assets/destination/background-destination-desktop.jpg");
 }
 
+.destination-grid{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:"title ." 
+                        "cont1 cont2";
+    grid-template-columns: 1.2fr .8fr;
+    grid-template-rows: 10vh 75vh;
+    place-content: center;
+}
 
  .title-cont{
     display: flex;
@@ -297,18 +298,17 @@ header nav ul li .destination-link-dest-page:hover{
 }
 
 .planet-cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     grid-area: cont1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
 }
 
 .planet-img-cont{
     height: 460px;
     width: 460px;
-    margin-bottom: 30px;
     margin-top: 0;
-    margin-top: 100px;
     margin-right: 30px;
 }
 
@@ -388,7 +388,7 @@ header nav ul li .destination-link-dest-page:hover{
     animation: appearRight ease-in .4s;
 }
 
-.planet-info-wrap p{
+.planet-info-wrap .description{
    font-family: var(--main-text);
    line-height: 30px;
    font-size: 19px;
@@ -449,7 +449,8 @@ header nav ul li .crew-link-crew-page:hover{
     grid-template-areas:"title cont2" 
                         "cont1 cont2";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 13vh 72vh;
+    grid-template-rows: 10vh 75vh;
+    min-height: 765px;
 }
 
 .crew-info-cont{
@@ -578,7 +579,7 @@ header nav ul li .technology-link-technology-page:hover{
     grid-template-areas:"title ." 
                         "cont1 cont2";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 13vh 72vh;
+    grid-template-rows: 10vh 75vh;
     padding-right: 0;
 }
 
@@ -852,14 +853,14 @@ for better responsive experience
         letter-spacing: 2px;
     }
 
-    /*DESTINATION MOBILE STYLE**********************/
+    /*DESTINATION TABLET STYLE**********************/
 
     .destination{
         background-image: url(/space-tourism-website-main/starter-code/assets/destination/background-destination-tablet.jpg);
     }
     
 
-    main {
+    .destination-grid {
         width: 100%;
         margin: 0 auto;
         display: grid;
@@ -874,6 +875,8 @@ for better responsive experience
     .planet-cont{
         width: 100%;
         display: block;
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .title-cont{
@@ -925,12 +928,14 @@ for better responsive experience
 
     .planet-info-wrap  h1{
         font-size: 5.3rem;
-        margin-bottom: 0;
+        margin-bottom: 0px;
+        height:auto;
     }
 
-    .planet-info-wrap p{
+    .planet-info-wrap .description{
         height:auto;
         margin-bottom: 46px;
+        height: 100px;
      }
 
     .planet-info-cont{
@@ -971,6 +976,7 @@ for better responsive experience
                             "cont2";
         grid-template-columns: 1fr;
         grid-template-rows:10vh 28vh 52vh;
+        padding: 0;
     }
 
     .crew-info-cont{
@@ -982,6 +988,10 @@ for better responsive experience
 
     .crew-info-cont .crew-info{
         width: 100%;
+    }
+
+    .crew-position-text{
+        text-align: center;
     }
 
 
@@ -1002,16 +1012,17 @@ for better responsive experience
 
     .crew-bio-cont{
         max-width: 100%;
-        width: 91%;
+        width: 100%;
         text-align: center;
         height: auto;
+        margin: 0;
     }
 
     .crew-bio-cont p{
         font-size: 16px;
         height: 100px;
-        margin-bottom: 20px;
-        padding: 0 60px;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .crew-text-wraper{
@@ -1040,6 +1051,7 @@ for better responsive experience
         width: 14px;
         height: 14px;
         cursor: pointer;
+        margin-top: 30px;
     }
     
     /* TECHNOLOGY**************************/
@@ -1055,7 +1067,7 @@ for better responsive experience
                             "cont2";
         grid-template-columns: 1fr;
         grid-template-rows:10vh 30vh 50vh;
-        padding-right: 0;
+        padding: 0;
     }
 
     .technology-info-wrap{
@@ -1162,9 +1174,13 @@ for better responsive experience
         height: 67px;
     }
 
+    .header-container{
+        padding: 0;
+    }
+
 
      header .logo {
-        margin-top: 20px;
+        margin-top: 50px;
         margin-left: 30px;
         margin-right: 0;
     }
@@ -1211,6 +1227,23 @@ for better responsive experience
         padding: 0px;
      }
 
+     .hamburger{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top:60px;
+        right: 25px;
+        z-index: 99;
+    }
+
+    .hamburger .line{
+        width: 25px;
+        margin-bottom: 7px;
+        list-style: none;
+        background-color: white;
+        height: 3px;
+    }
 
 
     .hamburger .line-1.active-close{
@@ -1234,16 +1267,7 @@ for better responsive experience
         transition: all .3s ease-in;
     }
     
-     
-    .hamburger{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 30px;
-        right: 25px;
-        z-index: 99;
-    }
+    
 
     .home-grid{
         max-width: 1440px;
@@ -1254,7 +1278,9 @@ for better responsive experience
         grid-template-areas: "cont1"
                              "cont2";
         grid-template-columns: 1fr;
-        grid-template-rows:40vh 50vh;
+        grid-template-rows:50vh 40vh;
+        place-content: initial;
+        min-height: auto;
     }
     
     .text-cont{
@@ -1328,7 +1354,7 @@ for better responsive experience
         width: 175px;
     }
 
-    main {
+    .destination-grid {
         width: 100%;
         margin: 0 auto;
         display: grid;
@@ -1337,6 +1363,7 @@ for better responsive experience
                             "cont2";
         grid-template-columns: 1fr;
         grid-template-rows:auto;
+        place-content: initial;
         padding:0;
     }
 
@@ -1449,6 +1476,8 @@ for better responsive experience
         grid-template-columns: 1fr;
         grid-template-rows:10vh 35vh 45vh;
         padding: 0 25px;
+        min-height: auto;
+        place-content: initial;
     }
 
     .crew-info-cont{
@@ -1528,6 +1557,7 @@ for better responsive experience
         grid-template-columns: 1fr;
         grid-template-rows:10vh 25vh 55vh;
         padding-right: 0;
+        min-height: auto;
     }
 
     .technology-text-cont  h2{
