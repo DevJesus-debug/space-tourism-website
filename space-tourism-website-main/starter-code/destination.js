@@ -30,7 +30,7 @@ function planetOptions(){
         const data = await dataFetch.json();
         const planetImg = document.createElement("img");
         planetImg.classList.add("planet-img");
-        planetImg.src = data.destinations[number].images.png
+        planetImg.src =data.destinations[number].images.png;
         planetCont.appendChild(planetImg)
         //creating planet name element
         const planetName = document.createElement("h1")
