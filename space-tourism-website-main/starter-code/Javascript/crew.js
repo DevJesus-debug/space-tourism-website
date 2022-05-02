@@ -6,9 +6,7 @@ const menuBtns = document.querySelectorAll(".circle-menu li");
 const number = document.querySelectorAll(".number");
 const hamburgerMenu = document.querySelector(".hamburger");
 const nav = document.querySelector("nav");
-const closeLine1 = document.querySelector(".hamburger .line-1");
-const closeLine2 = document.querySelector(".hamburger .line-2");
-const closeLine3 = document.querySelector(".hamburger .line-3");
+const menuLines = document.querySelectorAll(".hamburger .line");
 
 const url = "/space-tourism-website-main/starter-code/data.json";
 
@@ -16,9 +14,9 @@ const url = "/space-tourism-website-main/starter-code/data.json";
 //EVENTLISTENERS
 hamburgerMenu.addEventListener("click",()=>{
     nav.classList.toggle("active-menu");
-    closeLine2.classList.toggle("active-close");
-    closeLine1.classList.toggle("active-close");
-    closeLine3.classList.toggle("active-close");
+    menuLines.forEach(menu=>{
+        menu.classList.toggle("active-close")
+      })
 })
 
 
