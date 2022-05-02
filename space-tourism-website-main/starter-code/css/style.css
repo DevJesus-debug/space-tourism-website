@@ -1146,21 +1146,7 @@ for better responsive experience
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*MOBILE VIEWPORT***************************/
 
 @media screen and (max-width:620px){
     
@@ -1267,8 +1253,6 @@ for better responsive experience
         transition: all .3s ease-in;
     }
     
-    
-
     .home-grid{
         max-width: 1440px;
         height: 90vh;
@@ -1299,12 +1283,12 @@ for better responsive experience
     }
 
     .text h3{
-        font-size: 1rem;
+        font-size: .9rem;
         margin-top: 30px;
     }
 
     .text h1{
-        font-size: 5rem;
+        font-size: 5.5rem;
     }
 
     .text p{
@@ -1425,6 +1409,7 @@ for better responsive experience
         margin-bottom: 0;
     }
 
+
     .description{
         height: 126px;
     }
@@ -1478,10 +1463,13 @@ for better responsive experience
         padding: 0 25px;
         min-height: auto;
         place-content: initial;
+        
     }
 
     .crew-info-cont{
         grid-area: cont2;
+        align-items: initial;
+        padding-top: 25px;
     }
 
 
@@ -1537,7 +1525,8 @@ for better responsive experience
     .circle-menu li{
         background-color: rgba(237, 237, 237, 0.333);
         margin-right: 0;
-        margin: 10px;
+        margin-top: 10px;
+        margin: 8px;
         border-radius: 50%;
         width: 10px;
         height: 10px;
