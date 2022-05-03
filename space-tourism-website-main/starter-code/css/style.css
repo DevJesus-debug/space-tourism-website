@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root{
     --main-text:'Barlow Condensed', sans-serif;
     --sub-text:'Bellefair', serif;
@@ -141,7 +142,6 @@ header nav ul li a:hover{
 
 .text-cont{
     display: flex;
-    justify-content: flex-end;
     grid-area: cont1;
 }
 
@@ -464,8 +464,10 @@ header nav ul li .crew-link-crew-page:hover{
 .crew-img-cont{
     display: flex;
     grid-area: cont2;
+    justify-content: flex-start;
     overflow:hidden;
     height: 100%;
+    width: auto;
 }
 
 .crew-img-cont .crew-img{ 
@@ -473,12 +475,12 @@ header nav ul li .crew-link-crew-page:hover{
     align-items: flex-end;
 }
 
+
 .crew-img-cont img{
     animation: rise .6s ease-in;
-    height: 90%;
-    
+    height: 90%; 
+    max-height: 600px;  
 }
-
 
 
 .crew-title-cont h3{
@@ -1185,7 +1187,7 @@ for better responsive experience
        align-items: flex-start;
        z-index: 99;
        transform: translateX(100%);
-       transition: all ease-in .7s;
+       transition: all ease-in .3s;
     }
 
     
