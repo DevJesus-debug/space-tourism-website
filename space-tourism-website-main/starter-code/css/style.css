@@ -70,7 +70,9 @@ header .mid-line{
 header nav {
     background-color: rgba(99, 99, 99, 0.224);
     height: 100%;
-    backdrop-filter:blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    -moz-backdrop-filter:blur(15px);
+    backdrop-filter:blur(15px);
     width: 60%;
     display: flex;
     justify-content: center;
