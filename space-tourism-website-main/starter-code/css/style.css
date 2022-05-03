@@ -784,6 +784,7 @@ for better responsive experience
         background-position:center;
         background-size: cover;
         background-repeat: no-repeat;
+        min-height: 1024px;
         height: 100vh;
     }
 
@@ -1169,11 +1170,15 @@ for better responsive experience
     .wraper{
         background-image: url("../assets/home/background-home-mobile.jpg");
         position: relative;
+        min-height: 667px;
+        height: 100vh;
     }
 
     .header-container{ 
         align-items: center;
         height: 67px;
+        min-height: 67px;
+        max-height: 67px;
     }
     
     header{
