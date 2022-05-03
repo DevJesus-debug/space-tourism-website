@@ -1159,9 +1159,13 @@ for better responsive experience
         position: relative;
     }
 
-    header{ 
+    .header-container{ 
         align-items: center;
         height: 67px;
+    }
+    
+    header{
+        height: auto;
     }
 
     .header-container{
@@ -1170,7 +1174,7 @@ for better responsive experience
 
 
      header .logo {
-        margin-top: 50px;
+        margin-top: 20px;
         margin-left: 30px;
         margin-right: 0;
     }
@@ -1222,7 +1226,7 @@ for better responsive experience
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        top:60px;
+        top:45px;
         right: 25px;
         z-index: 99;
     }
@@ -1266,9 +1270,9 @@ for better responsive experience
         grid-template-areas: "cont1"
                              "cont2";
         grid-template-columns: 1fr;
-        grid-template-rows:50vh 40vh;
+        grid-template-rows:50% 50%;
         place-content: initial;
-        min-height: auto;
+        min-height:600px;
     }
     
     .text-cont{
@@ -1463,11 +1467,10 @@ for better responsive experience
                             "cont1"
                             "cont2";
         grid-template-columns: 1fr;
-        grid-template-rows:10vh 35vh 45vh;
+        grid-template-rows:10% 40% 50%;
         padding: 0 25px;
-        min-height: auto;
+        min-height: 600px;
         place-content: initial;
-        
     }
 
     .crew-info-cont{
@@ -1548,9 +1551,10 @@ for better responsive experience
                             "cont1"
                             "cont2";
         grid-template-columns: 1fr;
-        grid-template-rows:10vh 25vh 55vh;
+        /* grid-template-rows:10vh 25vh 55vh; */
+        grid-template-rows:10% 30% 60%;
         padding-right: 0;
-        min-height: auto;
+        min-height: 600px;
     }
 
     .technology-text-cont  h2{
