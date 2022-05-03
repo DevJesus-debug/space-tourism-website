@@ -70,7 +70,7 @@ header .mid-line{
 header nav {
     background-color: rgba(99, 99, 99, 0.224);
     height: 100%;
-    backdrop-filter:blur(15px) ;
+    backdrop-filter:blur(15px) !important;
     width: 60%;
     display: flex;
     justify-content: center;
@@ -146,9 +146,9 @@ header nav ul li a:hover{
 }
 
 .text{
-    width: 77%;
+    width: 90%;
     display: flex;
-    padding-right: 70px;
+    padding-right: 0;
     flex-direction: column;
     justify-content: center;
     margin-top: 100px;
